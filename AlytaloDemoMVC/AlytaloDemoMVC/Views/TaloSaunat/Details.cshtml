@@ -1,0 +1,74 @@
+﻿@model AlytaloDemoMVC.Models.TaloSauna
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TaloSauna</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunaNro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunaNro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunanNimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunanNimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunaTavoiteLampotila)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunaTavoiteLampotila)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunaNykyLampotila)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunaNykyLampotila)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunanTila)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunanTila)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunaStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunaStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaunaStop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaunaStop)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SaunaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

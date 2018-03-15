@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AlytaloDemoMVC.Models.TaloSauna>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunaNro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunanNimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunaTavoiteLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunaNykyLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunanTila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunaStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaunaStop)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunaNro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunanNimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunaTavoiteLampotila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunaNykyLampotila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunanTila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunaStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaunaStop)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SaunaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SaunaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SaunaID })
+        </td>
+    </tr>
+}
+
+</table>
